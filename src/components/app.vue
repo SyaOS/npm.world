@@ -1,19 +1,19 @@
 <template lang="pug">
 div#app
-  h1(v-text="msg")
+  site-header
+  site-footer
 </template>
 
 <script>
+import SiteHeader from './util/site-header.vue'
+import SiteFooter from './util/site-footer.vue'
 export default {
-  data () {
-    return {
-      msg: 'Hello npm.world!'
-    }
+  components: {
+    siteHeader: SiteHeader,
+    SiteFooter: SiteFooter
   }
 }
 </script>
 
 <style lang="stylus">
-body
-  font-family Helvetica, sans-serif
 </style>
