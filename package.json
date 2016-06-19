@@ -23,6 +23,12 @@
     "url": "https://github.com/SyaOS/npm.world/issues"
   },
   "homepage": "https://github.com/SyaOS/npm.world#readme",
+  "standard": {
+    "ignore": [
+      "/public/**",
+      "/src/main.js"
+    ]
+  },
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
