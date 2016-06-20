@@ -29,6 +29,10 @@ module.exports = {
         query: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: 'scss!css!style',
       }
     ]
   },
