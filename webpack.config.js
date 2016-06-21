@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './public'),
-    publicPath: '/public/',
+    publicPath: '/',
     filename: 'app.js'
   },
   resolveLoader: {
@@ -39,17 +39,17 @@ module.exports = {
       }
     ]
   },
-  proxy: {
-    '/*': {
-      target: 'http://localhost:3000/',
-      secure: false
-    }
-  },
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true,
-    hot: true
-  },
+  // proxy: {
+  //   '/*': {
+  //     target: 'http://localhost:3000/',
+  //     secure: false
+  //   }
+  // },
+  // devServer: {
+  //   historyApiFallback: true,
+  //   noInfo: true,
+  //   hot: true
+  // },
   devtool: '#eval-source-map',
   plugins: [
     new HtmlWebpackPlugin({

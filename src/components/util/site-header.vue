@@ -9,7 +9,6 @@ header.navbar.navbar-light.bg-faded
       a.nav-link(href="#") Features
   form.form-inline.pull-xs-right
     input.form-control(type="text", placeholder="Search")
-    button.btn.btn-primary.form-control primary
     button.btn.btn-success-outline(type="submit") Search
 </nav>
 
