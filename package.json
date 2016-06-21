@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node app",
     "test": "standard",
-    "dev": "npm start & npm run fe:dev-server",
-    "fe:dev-server": "webpack-dev-server --inline --hot --content-base public/",
-    "fe:build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "nodemon app",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
