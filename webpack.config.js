@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'scss!css!style',
+        loaders: ['style', 'css', 'sass'] 
       }
     ]
   },
