@@ -3,7 +3,7 @@
 const path = require('path')
 
 const webpack = require('webpack')
-const devMiddleware = require("koa-webpack-dev-middleware")
+const devMiddleware = require('koa-webpack-dev-middleware')
 const hotMiddleware = require('koa-webpack-hot-middleware')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -67,7 +67,7 @@ module.exports = {
     quiet: false,
     lazy: true,
     stats: {
-        colors: true
+      colors: true
     }
   }),
   hotMiddleware: hotMiddleware(compiler)
