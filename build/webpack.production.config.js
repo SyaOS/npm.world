@@ -13,6 +13,6 @@ config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     warnings: false
   }
 }))
-config.plugins.push(new webpack.optimize.OccurenceOrderPlugin())
+// config.plugins.push(new webpack.optimize.OccurenceOrderPlugin())
 
 module.exports = config

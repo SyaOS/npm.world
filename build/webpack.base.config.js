@@ -6,9 +6,9 @@ module.exports = {
   context: path.join(__dirname, '../'),
   entry: ['./src/main.js'],
   output: {
-    path: path.resolve(__dirname, './public'),
+    path: path.resolve(__dirname, '../public'),
     publicPath: '/',
-    filename: 'app.js'
+    filename: './app.js'
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')
