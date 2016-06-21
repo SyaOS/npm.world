@@ -12,6 +12,9 @@ module.exports = {
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, './node_modules')]
+  },
   module: {
     loaders: [
       {
@@ -32,7 +35,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'] 
+        loaders: ['style', 'css', 'sass']
       }
     ]
   },
