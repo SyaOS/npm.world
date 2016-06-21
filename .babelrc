@@ -1,3 +1,10 @@
 {
-  "presets": ["es2015"]
+  "env": {
+    "fe": {
+      "presets": ["es2015"]
+    },
+    "be": {
+      "presets": []
+    }
+  }
 }

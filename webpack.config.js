@@ -1,3 +1,5 @@
+process.env.BABEL_ENV = 'fe'
+
 module.exports = (function (env){
   switch (env) {
     case 'development':
