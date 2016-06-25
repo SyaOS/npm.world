@@ -1,6 +1,6 @@
 process.env.BABEL_ENV = 'fe'
 
-module.exports = (function (env){
+module.exports = (function (env) {
   switch (env) {
     case 'development':
       return require('./build/webpack.dev.config.js')
