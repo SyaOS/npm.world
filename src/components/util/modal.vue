@@ -2,19 +2,29 @@
 div.modal(v-bind:class="{'fade': !show}")
   div.modal-dialog(role="document")
     div.modal-content
-      div.modal-header
-        button.close(type="button", data-dismiss="modal", aria-label="Close")
-          span(aria-hidden="true") &times;
-        h4.modal-title Modal title
+      slot(name="header")
+        div.modal-header
+          button.close(v-if="closeButton", type="button", data-dismiss="modal", aria-label="Close", @click="handleCancel")
+            span(aria-hidden="true") &times;
+          h4.modal-title(v-text="title")
       div.modal-body
-        p One fine body&hellip;
-      div.modal-footer
-        button.btn.btn-secondary(type="button", data-dismiss="modal") Close
-        button.btn.btn-primary(type="button") Save changes
+        slot
+      slot(name="footer")
+        div.modal-footer
+          button.btn.btn-secondary(type="button", data-dismiss="modal", @click="handleCancel") Cancel
+          button.btn.btn-primary(type="button", @click="handleOk") OK
 </template>
 <script>
 export default {
-  props: ['show']
+  props: ['show', "title", "close-button"],
+  methods: {
+    handleOk () {
+      this.$emit('ok')
+    },
+    handleCancel () {
+      this.$emit('cancel')
+    }
+  }
 }
 </script>
 <style lang="stylus">

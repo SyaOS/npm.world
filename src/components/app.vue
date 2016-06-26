@@ -2,7 +2,7 @@
 div#app
   site-header
   site-footer
-  modal(show)
+  modal(v-bind:show="showModal", title="npm.world", close-button, @ok="handleOk", @cancel="handleCancel")
 </template>
 
 <script>
@@ -14,6 +14,20 @@ export default {
     modal: Modal,
     siteHeader: SiteHeader,
     SiteFooter: SiteFooter
+  },
+  data () {
+    return {
+      showModal: true
+    }
+  },
+  methods: {
+    handleOk () {
+      this.showModal = false
+      alert('OK')
+    },
+    handleCancel () {
+      this.showModal = false
+    }
   }
 }
 </script>
